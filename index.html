@@ -3,143 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Biography Form</title>
 </head>
 <body>
-    <h1>
-        Student Biography From
-    </h1>
+    <h1>Student Biography Form</h1>
+
     <fieldset>
-        <legend for="personal information">personal information</legend>
-    <h2>
-        Student Biography From
-    </h2>
+        <legend>Personal Information</legend>
 
+        <label for="fullName">Full Name (4 to 15 Characters):</label><br>
+        <input type="text" id="fullName" name="fullName" required minlength="4" maxlength="15" size="20"><br><br>
 
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" pattern=".+@example\.com" size="20" required><br><br>
 
-    <label for="First Name">Full Name (4 to 15 Charcter):
-    </label>
-    <br>
-    <input
-    type="text"
-    id="First Name"
-    required
-    minlength="4"
-    maxlength="15"
-    size="20"/>
-    <br>
+        <label for="start">Start Date:</label><br>
+        <input type="date" id="start" name="start" value="2018-07-22" min="2018-01-01" max="2018-12-31"><br><br>
 
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
 
+        <label for="cnic">CNIC:</label><br>
+        <input type="text" id="cnic" name="cnic" placeholder="xxxxx-xxxxxxx-x" pattern="\d{5}-\d{7}-\d{1}" required><br><br>
 
-    <label for="Email">Email Address
-    </label>
-    <br>
-    <input
-    type="Email"
-    id="Email"
-   pattern=".+@example\.com"
-    size="20"
-    required/>
+        <label for="phone">Phone No:</label><br>
+        <input type="text" id="phone" name="phone"><br><br>
 
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="2" cols="30"></textarea><br><br>
 
-
-    <br>
-    <label for="start">Start date:</label>
-    <br>
-    <input
-    type="date"
-    id="start"
-    name="trip-start"
-    value="2018-07-22"
-    min="2018-01-01"
-    max="2018-12-31" />
-
-
+        <label for="country">Select Your Country:</label><br>
+        <select id="country" name="country">
+            <option value="pak">PAK</option>
+            <option value="aus">AUS</option>
+            <option value="ind">IND</option>
+        </select>
+    </fieldset>
 
     <br>
-    <lable for="Gender">Gender</lable>
-    <br>
-    <div>
-        <input 
-        type="radio"
-        id="male"
-        name="r1"
-        />
 
+    <fieldset>
+        <legend>Academic Record</legend>
 
-    
-        <label for="male">male</label>
-            <input 
-            type="radio" 
-            id="Female"
-            name="r1"
-            />
+        <label for="degree">Degree:</label><br>
+        <select name="degree" id="degree">
+            <option value="bachelors">Bachelors</option>
+            <option value="masters">Masters</option>
+            <option value="phd">PhD</option>
+        </select><br><br>
 
+        <h3>Skills</h3>
+        <label><input type="checkbox" name="skills" value="html"> HTML</label><br>
+        <label><input type="checkbox" name="skills" value="css"> CSS</label><br>
+        <label><input type="checkbox" name="skills" value="js"> JavaScript</label><br>
+        <label><input type="checkbox" name="skills" value="react"> React</label><br><br>
 
-            <label for="Female">Female</label>
-            <br>
-                <label for="CNIC">CNIC</label>
-                <input 
-                type="text"
-                placeholder="xxxxx-xxxxxxx-x" 
-                pattern="\d{5}-\d{7}-\d{1}" 
-                required
-                />
-                
-                <br>
-                <label for="Phone no">Phone No</label>
-                <input 
-                type="text" 
-                />
-
-<br>
-                <label for="adress">Adress</label>
-                <textarea rows="2" cols="30"></textarea>
-
-<br>
-<label for="sel country">Select Your Country</label>
-<br>
-<select id="country" name="fcount">
-  <option value="apple">PAK</option>
-  <option value="banana">AUS</option>
-  <option value="mango">IND</option>
-</select>
-
-                </fieldset>
-</div>
-
-
-
-<div><fieldset>
-    <legend>Acadmic Record</legend>
-    <label for="digreee">digree</label>
-    <br>
-    <select name="digree" id="colification">
-    <br>
-    <option value="bssklfjasdjf"></option>
-    <option value="mbscnskla"></option>
-    <option value="bbcksklca"></option>
-</select>
-
-
-<br>
-<h3>Skills</h3>
-<label><input type="checkbox" name="skills" value="html"> HTML</label><br>
-<label><input type="checkbox" name="skills" value="css"> CSS</label><br>
-<label><input type="checkbox" name="skills" value="js"> JavaScript</label><br>
-<label><input type="checkbox" name="skills" value="react"> React</label><br>
-
-
-
-<br>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    
-    <label for="file">File choose karein:</label> <br>
-    <input type="file" id="file" name="myfile">
-    <br><br>
-    <input type="submit" value="Upload">
-  </form>
-</fieldset></div>
-
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="file">Choose a file:</label><br>
+            <input type="file" id="file" name="myfile"><br><br>
+            <input type="submit" value="Upload">
+        </form>
+    </fieldset>
 </body>
 </html>
