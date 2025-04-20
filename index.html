@@ -66,6 +66,22 @@
             <option value="phd">PhD</option>
         </select><br><br>
 
+  
+    <h2>Upload Your Educational Documents</h2>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="matric">Matric Certificate:</label><br>
+        <input type="file" id="matric" name="matric_doc" accept="image/*" required><br><br>
+
+        <label for="inter">Intermediate Certificate:</label><br>
+        <input type="file" id="inter" name="inter_doc" accept="image/*" required><br><br>
+
+        <label for="uni">University Documents:</label><br>
+        <input type="file" id="uni" name="uni_doc[]" accept="image/*" multiple required><br><br>
+
+        <input type="submit" value="Upload Documents">
+   
+
+        <br>
         <h3>Skills</h3>
         <label><input type="checkbox" name="skills" value="html"> HTML</label><br>
         <label><input type="checkbox" name="skills" value="css"> CSS</label><br>
